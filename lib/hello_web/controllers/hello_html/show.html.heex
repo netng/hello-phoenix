@@ -1,0 +1,29 @@
+<section>
+  <.greet messenger={@messenger} receiver="nandang" />
+</section>
+
+<div class={@class}>
+  <p>Hello Class Red</p>
+</div>
+
+<%= raw("<b>bold?</b>") %>
+<%= "<b>bold?</b>" %>
+
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Power</th>
+  </tr>
+
+  <%!-- <%= for number <- 1..10 do %>
+    <tr>
+      <td><%= number %></td>
+      <td><%= number * number %></td>
+    </tr>
+  <% end %> --%>
+
+  <tr :for={number <- 1..10}>
+    <td><%= number %></td>
+    <td><%= number * number %></td>
+  </tr>
+</table>
